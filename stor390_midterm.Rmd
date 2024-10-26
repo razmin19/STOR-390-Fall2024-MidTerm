@@ -12,20 +12,44 @@ The United States’ healthcare system is constantly criticized for being inacce
 In recent times, there has been efforts to predict whether a rural hospital is at risk of closure given the current market forces and each facility’s characteristics. One such prediction model has been proposed in “An updated model of rural hospital financial distress” which, as the title suggests, builds upon a previously established model of a ‘financial distress index (FDI)’ for rural hospitals.$^{2,3}$
 
 This paper utilizes data from the Healthcare Cost Reporting System (HCRIS) consisting of 14116 yearly observations from 2013 to 2019 of 2311 general care, nonfederal rural hospitals – which were randomly sampled into a training and testing split at the very beginning of the analysis. Three binary financial distress outcomes were chosen for consideration: negative cash flow margin (a profitability metric), negative equity and hospital closure. The researchers then considered a multitude of covariates, grouped under 4 domains: 
+
 (1) financial performance: hospital profitability, uncompensated care, outpatient revenue and CAHMPAS score (a performance metric based on benchmarks set by Critical Access Hospital Measurement and Performance Assessment System),
+
 (2) government reimbursement: Critical Access Hospital (CAH) status, Medicare outpatient payer mix expressed as a percentage of all outpatient charges, ratio of Medicare Advantage and cost plan days to traditional Medicare acute care days, Medicaid-to-Medicare fee index, and Medicaid payer mix expressed as a percentage of all patient charges,
+
 (3) organizational traits: ownership, size (as measured by net patient revenue), and system affiliation,
+
 (4) market characteristics: competition, market size, economic condition, and Medicare Advantage penetration rate.
 
 A probit regression model consisting of these covariates and outcomes were fitted over the training set. In the testing set, the covariate values for year *t* were used to predict the three financial distress outcomes for year *t+2*. Only complete case analysis was performed, which means that there was no missing data for the hospitals considered in the model. 
+
+The paper did not report the actual coefficients from the model since the authors argued that the coefficients of the probits are not intuitively understandable. Instead, the Average Marginal Effect (AME) given a one standard deviation change in the covariate was reported for the statistically significant predictors:
+
+1.	Hospital profitability (percent total margin): AME = -2.01
+
+2.	Percent CAHMPAS score: AME = -3.62
+
+3.	CAH status: AME = -3.16
+
+4.	Medicare outpatient payer mix: AME = -0.89
+
+5.	System affiliation: AME = 2.06
+
+6.	Hospital size (Logged net patient revenue): AME = -3.50
+
+7.	Economic condition (percent market population in poverty): AME = 1.09
+
+To clarify with an example, an increase of one standard deviation in percent total margin decreased the probability of future financial distress by 2.01%. To be noted that only system affiliation and poor economic condition of the market population are the two covariates above that worsened the probability of financial distress.
 
 Part of the paper aimed to check the calibration of the model. The researchers put forth an equation based in financial theory to predict the probability of each financial distress outcome, taking into account the prevalence of each outcome and the impact of key hospital-level covariates which were identified through review of prior literature. This probability was calculated for every hospital-year pair in both training and test sets. The test set observations were divided into 20 groups depending on their predicted probability of distress. The observed rate of financial distress within each group was plotted against the average predicted probability of distress. Strong correlation was observed across nearly all the groups.
 
 Predictive power was assessed using the area under the receiver operating characteristic curve (AUC). Within this context, the AUC would represent the probability that a randomly chosen hospital observation with financial distress would have a greater predicted probability of distress than a randomly chosen hospital observation without distress. The model was found to have an AUC of 0.87.
 
-Ideally, this model would be used as a tool to increase funding or advocate policy changes for the given rural hospital. However, a huge limitation of this model is that it does not consider the idea that the covariates could have a causal relationship with any of the three financial distress outcomes. If, say, negative cash flow margin is the reason for one of the covariate values for a certain hospital, which then leads to the model predicting future financial distress, it is essentially profitability that dictates whether the hospital receives additional funding or intervention. Using this model regardless would raise normative concerns as profit – benefit of the hospital owners – would take priority over the needs of the community served by that hospital. Allowing hospitals to be so heavily influenced by market powers while overlooking the actual needs of the community endangers rural hospitals all over the country. 
+Ideally, this model would be used as a tool to increase funding or advocate policy changes for the given rural hospital. However, a huge limitation of this model is that it does not consider the idea that the covariates could have a causal relationship with any of the three financial distress outcomes. If, say, negative cash flow margin is the reason for one of the covariate values for a certain hospital, which then leads to the model predicting future financial distress, it is essentially profitability that dictates whether the hospital receives additional funding or intervention. This is wholly possible as one of the statistically significant covariates reported in the paper described above was percent total margin or, in other words, profitability. 
 
-Consequentialists would look at such a system and deem it unethical as a greater number of people would be suffering for the monetary benefit of a few. Deontologists would deem it unethical as well since patients are being used as the means to a more profitable end but are not receiving the full dignity as separate moral agents deserving of proper healthcare regardless of where they live. 
+Using this model regardless would raise normative concerns as profit – benefit of the hospital owners – would take priority over the needs of the community served by that hospital. Allowing hospitals to be so heavily influenced by market powers while overlooking the actual needs of the community endangers rural hospitals all over the country. 
+
+Consequentialists would look at such a system and deem it unethical as a greater number of people would be suffering for the monetary benefit of a few. Deontologists would deem it unethical as well since patients are being used as the means to a more profitable end for the hospital owners but are not receiving the full dignity as separate moral agents deserving of proper healthcare regardless of where they live. It also seems to be a clear-cut issue through the lens of virtue ethics as corporate greed can hardly rival the virtue of compassion for patients and their pain.
 
 Given the current climate where rural hospitals are becoming less and less financially viable, the rural communities are getting more and more vulnerable to complete healthcare inaccessibility. It is imperative that any model used to guide policy on rural hospitals are not solely based on maximizing profit.$^4$
 
