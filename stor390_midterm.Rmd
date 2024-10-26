@@ -15,7 +15,7 @@ This paper utilizes data from the Healthcare Cost Reporting System (HCRIS) consi
 (1) financial performance: hospital profitability, uncompensated care, outpatient revenue and CAHMPAS score (a performance metric based on benchmarks set by Critical Access Hospital Measurement and Performance Assessment System),
 (2) government reimbursement: Critical Access Hospital (CAH) status, Medicare outpatient payer mix expressed as a percentage of all outpatient charges, ratio of Medicare Advantage and cost plan days to traditional Medicare acute care days, Medicaid-to-Medicare fee index, and Medicaid payer mix expressed as a percentage of all patient charges,
 (3) organizational traits: ownership, size (as measured by net patient revenue), and system affiliation,
-(4) market characteristics: competition, market size, economic condition, and Medicare Advantage penetration rate,
+(4) market characteristics: competition, market size, economic condition, and Medicare Advantage penetration rate.
 
 A probit regression model consisting of these covariates and outcomes were fitted over the training set. In the testing set, the covariate values for year *t* were used to predict the three financial distress outcomes for year *t+2*. Only complete case analysis was performed, which means that there was no missing data for the hospitals considered in the model. 
 
