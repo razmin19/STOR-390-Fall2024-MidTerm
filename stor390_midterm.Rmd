@@ -1,0 +1,23 @@
+---
+title: "Rural hospitals in financial distress: The ethics of holding hospitals in underserved communities to capitalist standards"
+author: "Razmin Bari"
+date: "10/25/24"
+output: pdf_document
+fontsize: 12pt
+---
+The United States’ healthcare system is constantly criticized for being inaccessible to lower-income households, even after the Affordable Care Act was passed nearly 15 years ago. Rural communities are particularly disadvantaged with healthcare facilities being simply too far for both emergency and non-emergency cases. The situation has been getting worse as survey studies show that over 100 rural hospitals in 34 states have closed down over the past decade – many of them owing to long-term negative profit margins.
+
+In recent times, there has been efforts to predict whether a rural hospital will be unable to keep operating given the current market forces and the healthcare needs of the demographics served by that facility. In this paper, I intend to critique “An updated model of rural hospital financial distress” which proposes a prediction model that, as the name suggests, builds upon a previously established model of a ‘financial distress index (FDI)’ and aims to predict unprofitability of rural hospitals. 
+
+The paper describes three financial distress outcomes as those of interest: negative cash flow margin, negative equity and hospital closure. Firstly, the overall prevalence of each of these outcomes are accounted for. Then, the risk of financial distress is described by a latent, continuous index based on different hospital-level covariates. This risk value, as well as a constant accounting for differences in outcome prevalence, is then used to generate the probability of each financial distress outcome for a given hospital.
+
+
+\newpage
+
+References
+
+
+Malone, Tyler L, et al. “*An Updated Model of Rural Hospital Financial Distress.*” The Journal of Rural Health, 3 Oct. 2024, https://doi.org/10.1111/jrh.12882. Accessed 25 Oct. 2024.
+
+Rural Hospital Closures. Sheps Center. Accessed October 25, 2024. https://www.shepscenter.unc.edu/programs-projects/rural-health/rural-hospital-closures/
+
