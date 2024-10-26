@@ -1,1 +1,44 @@
+---
+title: "Rural hospitals in financial distress: The ethics of holding hospitals in underserved communities to capitalist standards"
+author: "Razmin Bari"
+date: "10/25/24"
+output: pdf_document
+header-includes:
+    - \usepackage{setspace}\doublespacing
+fontsize: 12pt
+---
+The United States’ healthcare system is constantly criticized for being inaccessible to lower-income households, even after the Affordable Care Act was passed nearly 15 years ago. Rural communities are particularly disadvantaged with healthcare facilities being simply too far for both emergency and non-emergency cases. The situation has been getting worse as survey studies show that over 100 rural hospitals in 34 states have closed down over the past decade – many of them owing to long-term negative profit margins.$^1$
+
+In recent times, there has been efforts to predict whether a rural hospital is at risk of closure given the current market forces and each facility’s characteristics. One such prediction model has been proposed in “An updated model of rural hospital financial distress” which, as the title suggests, builds upon a previously established model of a ‘financial distress index (FDI)’ for rural hospitals.$^{2,3}$
+
+This paper utilizes data from the Healthcare Cost Reporting System (HCRIS) consisting of 14116 yearly observations from 2013 to 2019 of 2311 general care, nonfederal rural hospitals – which were randomly sampled into a training and testing split at the very beginning of the analysis. Three binary financial distress outcomes were chosen for consideration: negative cash flow margin (a profitability metric), negative equity and hospital closure. The researchers then considered a multitude of covariates, grouped under 4 domains: 
+(1) financial performance: hospital profitability, uncompensated care, outpatient revenue and CAHMPAS score (a performance metric based on benchmarks set by Critical Access Hospital Measurement and Performance Assessment System),
+(2) government reimbursement: Critical Access Hospital (CAH) status, Medicare outpatient payer mix expressed as a percentage of all outpatient charges, ratio of Medicare Advantage and cost plan days to traditional Medicare acute care days, Medicaid-to-Medicare fee index, and Medicaid payer mix expressed as a percentage of all patient charges,
+(3) organizational traits: ownership, size (as measured by net patient revenue), and system affiliation,
+(4) market characteristics: competition, market size, economic condition, and Medicare Advantage penetration rate,
+
+A probit regression model consisting of these covariates and outcomes were fitted over the training set. In the testing set, the covariate values for year *t* were used to predict the three financial distress outcomes for year *t+2*. Only complete case analysis was performed, which means that there was no missing data for the hospitals considered in the model. 
+
+Part of the paper aimed to check the calibration of the model. The researchers put forth an equation based in financial theory to predict the probability of each financial distress outcome, taking into account the prevalence of each outcome and the impact of key hospital-level covariates which were identified through review of prior literature. This probability was calculated for every hospital-year pair in both training and test sets. The test set observations were divided into 20 groups depending on their predicted probability of distress. The observed rate of financial distress within each group was plotted against the average predicted probability of distress. Strong correlation was observed across nearly all the groups.
+
+Predictive power was assessed using the area under the receiver operating characteristic curve (AUC). Within this context, the AUC would represent the probability that a randomly chosen hospital observation with financial distress would have a greater predicted probability of distress than a randomly chosen hospital observation without distress. The model was found to have an AUC of 0.87.
+
+Ideally, this model would be used as a tool to increase funding or advocate policy changes for the given rural hospital. However, a huge limitation of this model is that it does not consider the idea that the covariates could have a causal relationship with any of the three financial distress outcomes. If, say, negative cash flow margin is the reason for one of the covariate values for a certain hospital, which then leads to the model predicting future financial distress, it is essentially profitability that dictates whether the hospital receives additional funding or intervention. Using this model regardless would raise normative concerns as profit – benefit of the hospital owners – would take priority over the needs of the community served by that hospital. Allowing hospitals to be so heavily influenced by market powers while overlooking the actual needs of the community endangers rural hospitals all over the country. 
+
+Consequentialists would look at such a system and deem it unethical as a greater number of people would be suffering for the monetary benefit of a few. Deontologists would deem it unethical as well since patients are being used as the means to a more profitable end but are not receiving the full dignity as separate moral agents deserving of proper healthcare regardless of where they live. 
+
+Given the current climate where rural hospitals are becoming less and less financially viable, the rural communities are getting more and more vulnerable to complete healthcare inaccessibility. It is imperative that any model used to guide policy on rural hospitals are not solely based on maximizing profit.$^4$
+
+
+\newpage
+
+References
+
+1.	Rural Hospital Closures. Sheps Center. Accessed October 25, 2024. https://www.shepscenter.unc.edu/programs-projects/rural-health/rural-hospital-closures/
+
+2.	Malone TL, Pink GH, Holmes GM. An updated model of rural hospital financial distress. J Rural Health. Published online October 3, 2024. doi:10.1111/jrh.12882
+
+3.	Holmes GM, Kaufman BG, Pink GH. Predicting Financial Distress and Closure in Rural Hospitals. J Rural Health. 2017;33(3):239-249. doi:10.1111/jrh.12187
+
+4.	McDill V. Profitability decline is forcing many rural hospitals to close or merge - School of Public Health - University of Minnesota. School of Public Health. June 16, 2023. Accessed October 26, 2024. https://www.sph.umn.edu/news/profitability-decline-is-forcing-many-rural-hospitals-to-close-or-merge/
 
